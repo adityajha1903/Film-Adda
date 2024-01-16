@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/media_or_person_iv"
+        android:layout_width="100dp"
+        android:layout_height="149.25dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/custom_poster"
+        android:elevation="2dp"
+        app:shapeAppearanceOverlay="@style/curvedCornerRadius"/>
+
+    <FrameLayout
+        android:id="@+id/rating_frame_layout"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="137.25dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="3dp"
+        android:background="@drawable/rating_bg"
+        android:clickable="false"
+        android:focusable="false">
+
+        <com.adiandrodev.filmadda.presentation.customview.RatingView
+            android:id="@+id/rating_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:id="@+id/rating_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            tools:text="5.5"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/background_color_rev"
+            android:textStyle="bold"
+            tools:ignore="SmallSp" />
+    </FrameLayout>
+
+    <ImageButton
+        android:id="@+id/delete_media_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/baseline_delete_24"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="end"
+        android:elevation="3dp"
+        android:layout_marginEnd="10dp"
+        app:tint="@color/background_color"
+        android:contentDescription="@string/delete_media_from_list"
+        android:background="@drawable/delete_media_btn_bg"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="175.25dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/media_item_tv1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@color/background_color_rev"
+            android:textSize="13sp"
+            android:maxLines="2"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            tools:text="Captain America and The Winter Soldier"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/media_item_tv2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textColor="@color/icon_color"
+            android:textSize="10sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:text="Captain America and The Winter Soldier"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+    
+</FrameLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_home_24"
+        android:iconTint="@color/background_color"
+        android:title="@string/home" />
+
+    <item android:id="@+id/nav_moviesLists"
+        android:icon="@drawable/baseline_movie_24"
+        android:iconTint="@color/background_color"
+        android:title="@string/movies" />
+
+    <item android:id="@+id/nav_tvLists"
+        android:icon="@drawable/baseline_live_tv_24"
+        android:iconTint="@color/background_color"
+        android:title="@string/tvshows" />
+
+    <item android:id="@+id/nav_persons"
+        android:icon="@drawable/baseline_person_24"
+        android:iconTint="@color/background_color"
+        android:title="@string/people" />
+
+</menu>

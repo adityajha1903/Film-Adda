@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.adiandrodev.filmadda'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.adiandrodev.filmadda"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file("local.properties").newDataInputStream())
+        buildConfigField "String","API_KEY","\"${properties.getProperty("API_KEY")}\""
+        buildConfigField "String","BASE_URL","\"https://api.themoviedb.org/3/\""
+        buildConfigField "String","AUTH_URL","\"https://www.themoviedb.org/authenticate/\""
+        buildConfigField "String","IMAGE_URL","\"https://image.tmdb.org/t/p/original/\""
+        buildConfigField "String","DEVELOPER_EMAIL","\"adi.androdev.help@gmail.com\""
+        buildConfigField "String","GRAVATAR_BASE_URL","\"https://www.gravatar.com/avatar/\""
+        buildConfigField "String","YOUTUBE_VIDEO_BASE_URL","\"https://www.youtube.com/watch?v=\""
+        buildConfigField "String","YOUTUBE_VIDEO_THUMBNAIL_BASE_URL","\"https://img.youtube.com/vi/\""
+        buildConfigField "String","IMDB_BASE_URL","\"https://www.imdb.com/title/\""
+        buildConfigField "String","FACEBOOK_BASE_URL","\"https://www.facebook.com/\""
+        buildConfigField "String","INSTAGRAM_BASE_URL","\"https://www.instagram.com/\""
+        buildConfigField "String","TWITTER_BASE_URL","\"https://www.twitter.com/\""
+        buildConfigField "String","WIKIDATA_BASE_URL","\"http://www.wikidata.org/entity/\""
+        buildConfigField "String","DEVELOPER_TWITTER","\"adityajha_1903\""
+        buildConfigField "String","PLAY_STORE_SHARE_LINK","\"https://play.google.com/store/apps/details?id=\""
+        buildConfigField "String","TMDB_URL","\"https://www.themoviedb.org/\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+}
+
+dependencies {
+
+    // ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
+    // LiveData
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+    // Saved state module for ViewModel
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0'
+    // Annotation processor
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.7.0'
+    // Room
+    implementation "androidx.room:room-runtime:2.6.1"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.play:review-ktx:2.0.1'
+    // Annotation processor
+    kapt 'androidx.room:room-compiler:2.6.1'
+    // Optional - Kotlin extensions and coroutine support for room
+    implementation "androidx.room:room-ktx:2.6.1"
+    // Coroutines - core
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3'
+    // Coroutines - android
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+    // Dagger
+    implementation 'com.google.dagger:dagger:2.48.1'
+    // Annotation processor
+    kapt 'com.google.dagger:dagger-compiler:2.48.1'
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    // Gson Converter
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    // OKHttp logging interceptor
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.6'
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    // Lottie animation
+    implementation 'com.airbnb.android:lottie:6.1.0'
+    // Shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    // Kotlin reflection
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.8.22'
+    // Custom chrome tab
+    implementation 'androidx.browser:browser:1.7.0'
+
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

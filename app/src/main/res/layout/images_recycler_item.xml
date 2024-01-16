@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.imageview.ShapeableImageView android:id="@+id/image_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="240dp"
+    android:layout_height="135dp"
+    android:background="@color/grey"
+    android:scaleType="centerCrop"
+    android:layout_margin="4dp"
+    android:elevation="2dp"
+    android:contentDescription="@string/backdrop"
+    app:shapeAppearanceOverlay="@style/videoAndImages"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

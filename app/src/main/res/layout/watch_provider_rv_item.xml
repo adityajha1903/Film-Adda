@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.imageview.ShapeableImageView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/logo_iv"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    app:strokeColor="@color/icon_bg_color"
+    app:strokeWidth="1dp"
+    android:padding="1dp"
+    android:background="@color/grey"
+    app:shapeAppearanceOverlay="@style/WatchProvidersLogo"
+    tools:src="@drawable/wp_logo"
+    android:layout_marginHorizontal="5dp" />

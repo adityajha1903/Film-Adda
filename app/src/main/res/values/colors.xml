@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background_color">#FFFFFF</color>
+    <color name="background_color_rev">#000000</color>
+    <color name="icon_color">#013B6A</color>
+    <color name="icon_bg_color">#92BDDD</color>
+    <color name="grey">#6E6D6D</color>
+
+    // progress colors
+    <color name="progress_1">#FF0000</color>
+    <color name="progress_bg_1">#65FF0000</color>
+    <color name="progress_2">#FF6347</color>
+    <color name="progress_bg_2">#66FF6347</color>
+    <color name="progress_3">#FF7F50</color>
+    <color name="progress_bg_3">#66FF7F50</color>
+    <color name="progress_4">#FF8C00</color>
+    <color name="progress_bg_4">#66FF8C00</color>
+    <color name="progress_5">#FFA500</color>
+    <color name="progress_bg_5">#66FFA500</color>
+    <color name="progress_6">#FFD700</color>
+    <color name="progress_bg_6">#66FFD700</color>
+    <color name="progress_7">#FFFF00</color>
+    <color name="progress_bg_7">#66FFFF00</color>
+    <color name="progress_8">#00FF00</color>
+    <color name="progress_bg_8">#6600FF00</color>
+    <color name="progress_9">#7FFF00</color>
+    <color name="progress_bg_9">#667FFF00</color>
+    <color name="progress_10">#00FF7F</color>
+    <color name="progress_bg_10">#6600FF7F</color>
+
+</resources>

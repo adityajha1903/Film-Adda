@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.fragment.MediaListsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="16dp">
+
+                <include
+                    layout="@layout/shimmer_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <LinearLayout
+                android:id="@+id/main_ui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".presentation.activity.MovieActivity"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include
+                    android:id="@+id/popular_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/media_lists"
+                    android:layout_marginTop="16dp"/>
+
+                <include
+                    android:id="@+id/airing_today_or_now_playing_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/media_lists"
+                    android:layout_marginTop="20dp"/>
+
+                <include
+                    android:id="@+id/on_the_air_or_upcoming_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/media_lists"
+                    android:layout_marginTop="20dp"/>
+
+                <include
+                    android:id="@+id/top_rated_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    layout="@layout/media_lists"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </ScrollView>
+
+</layout>

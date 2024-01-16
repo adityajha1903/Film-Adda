@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.activity.ProfileActivity">
+
+        <include
+            android:id="@+id/included_app_bar"
+            layout="@layout/simple_app_bar_layout"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/included_app_bar"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ScrollView
+                android:id="@+id/log_in_sv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                tools:visibility="gone">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="7dp"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:indeterminate="true"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottie_anim"
+                        android:layout_width="260dp"
+                        android:layout_height="260dp"
+                        android:layout_marginTop="32dp"
+                        app:lottie_rawRes="@raw/lottie"
+                        app:lottie_autoPlay="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@id/lottie_anim"
+                        android:textColor="@color/background_color_rev"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:gravity="center"
+                        android:text="@string/log_in_note"/>
+
+                    <TextView
+                        android:id="@+id/log_in_or_sign_up_button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/log_in_or_sign_up"
+                        android:textColor="@color/background_color_rev"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:elevation="4dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_marginTop="24dp"
+                        android:gravity="center"
+                        android:padding="12dp"
+                        android:background="@drawable/button_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:layout_constraintTop_toBottomOf="@id/tv"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/profile_sv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmerLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:visibility="gone"
+                        android:layout_marginHorizontal="16dp">
+
+                        <include
+                            layout="@layout/shimmer_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/profileStatesData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/profile_iv"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_margin="16dp"
+                            android:scaleType="centerCrop"
+                            tools:src="@drawable/backdrop"
+                            app:shapeAppearanceOverlay="@style/CircularImage"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:clickable="false"
+                            android:focusable="false"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="vertical"
+                            android:layout_margin="16dp"
+                            app:layout_constraintTop_toTopOf="@id/profile_iv"
+                            app:layout_constraintBottom_toBottomOf="@id/profile_iv"
+                            app:layout_constraintStart_toEndOf="@id/profile_iv">
+
+                            <TextView
+                                android:id="@+id/username_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/background_color_rev"
+                                tools:text="adityajha1903"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="16sp"
+                                android:text="@string/username"
+                                android:layout_marginStart="12dp"
+                                android:textStyle="bold"
+                                android:textColor="@color/grey"/>
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/log_out_button"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="centerCrop"
+                            android:padding="10dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/baseline_logout_24"
+                            app:tint="@color/progress_2"
+                            app:layout_constraintTop_toTopOf="@id/profile_iv"
+                            app:layout_constraintBottom_toBottomOf="@id/profile_iv"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:contentDescription="@string/log_out" />
+
+                        <include
+                            android:id="@+id/favourite_media"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            layout="@layout/media_lists"
+                            android:layout_marginTop="24dp"
+                            app:layout_constraintTop_toBottomOf="@id/profile_iv"/>
+
+                        <include
+                            android:id="@+id/watchlist_media"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            layout="@layout/media_lists"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintTop_toBottomOf="@id/favourite_media"/>
+
+                        <include
+                            android:id="@+id/rated_media"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            layout="@layout/media_lists"
+                            android:layout_marginHorizontal="28dp"
+                            app:layout_constraintTop_toBottomOf="@id/watchlist_media"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </FrameLayout>
+
+            </ScrollView>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

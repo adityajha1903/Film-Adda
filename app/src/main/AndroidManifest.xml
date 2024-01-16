@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" tools:node="remove"/>
+
+    <queries>
+        <package android:name="com.google.android.gm" />
+    </queries>
+
+    <application
+        android:name="com.adiandrodev.filmadda.MyApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FilmAdda"
+        tools:targetApi="31">
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.ImageActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FilmAdda.Details"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.SearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.SeasonActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FilmAdda.Details"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.PersonActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.CollectionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FilmAdda.Details"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.TvShowsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FilmAdda.Details"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.MovieActivity"
+            android:exported="false"
+            android:theme="@style/Theme.FilmAdda.Details"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.ProfileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="approved"
+                    android:scheme="com.adiandrodev.filmadda" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.SettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name="com.adiandrodev.filmadda.presentation.activity.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
