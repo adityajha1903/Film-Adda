@@ -30,7 +30,6 @@ Introducing 'Film Adda: Your Ultimate Movie Companion' - Your go-to Android app 
 
 Film Adda is your all-in-one entertainment hub, meticulously crafted for movie enthusiasts and TV show addicts. With a seamless blend of powerful features, sleek design, and an expansive movie database, this app promises to redefine the way you experience film and television. Here's a detailed look at its rich set of features:
 - Get different categories of Movies and TV Shows lists like Trending, Popular, Now playing, On The Air, and many more.  
-- Get different categories of Movies and TV Shows lists like Trending, Popular, Now playing, On The Air, and many more.
 - Search for favorite Movies, TV Shows, Persons, and Collections using the Film Adda Search feature.
 - Get yourself authenticated with TMDb using our login/sign-up feature so you can avail features like adding Movies or TV Shows to different lists like Favorite and Watchlist, or to rate the media and also get personal recommendations.
 - Access a gallery of posters, profiles, and backdrops.
