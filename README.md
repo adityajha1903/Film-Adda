@@ -4,7 +4,7 @@
       height="30"
       width="30">
 </sub>
-Chat Gemini
+Film Adda
 </h1>
 
 <h3 align="left">
